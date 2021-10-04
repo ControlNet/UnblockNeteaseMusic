@@ -1,4 +1,5 @@
-const DEFAULT_SOURCE = ['kugou', 'kuwo', 'migu', 'bilibili'];
+//const DEFAULT_SOURCE = ['qq']
+const DEFAULT_SOURCE = ['qq', 'kugou', 'migu', 'joox', 'pyncmd', 'kuwo'];
 const PROVIDERS = {
 	qq: require('./provider/qq'),
 	kugou: require('./provider/kugou'),
