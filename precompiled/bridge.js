@@ -11546,7 +11546,7 @@ var pyncmd = {
   check
 };
 
-const DEFAULT_SOURCE = ['qq', 'kugou', 'migu', 'joox', 'pyncmd', 'kuwo'];
+const DEFAULT_SOURCE = ['qq', 'kugou', 'joox', 'pyncmd', 'kuwo'];
 const PROVIDERS = {
   qq: qq,
   kugou: kugou,
