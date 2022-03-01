@@ -13,17 +13,20 @@ on:
     workflow_dispatch:
 
 jobs:
-    run-prettier:
+    build-precompiled:
         runs-on: ubuntu-latest
+        permissions:
+            contents: write
+            pull-requests: write
 
         steps:
             - name: Checkout
               uses: actions/checkout@v2
 
-            - name: Use Node.js 14
+            - name: Use Node.js 16
               uses: actions/setup-node@v2
               with:
-                  node-version: 14
+                  node-version: 16
                   cache: yarn
 
             - name: Install dependencies
@@ -35,8 +38,9 @@ jobs:
             - name: Create Pull Request
               uses: peter-evans/create-pull-request@v3
               with:
-                  token: ${{ secrets.PR_PAT }}
+                  token: ${{ github.token }}
                   commit-message: 'build(precompiled): make a bundle with the dependencies'
+                  author: 'github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>'
                   branch: ci/build-precompiled
                   delete-branch: true
                   title: 'build(precompiled): make a bundle with the dependencies'

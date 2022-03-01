@@ -4,8 +4,11 @@ on:
     push:
         branches:
             - 'enhanced'
-        paths-ignore:
-            - '**.md'
+        paths:
+            - '.github/workflows/push-docker.yml'
+            - 'precompiled/**'
+            - 'server.crt'
+            - 'server.key'
 
     release:
         types:

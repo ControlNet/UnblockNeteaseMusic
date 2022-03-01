@@ -1,5 +1,4 @@
-// const DEFAULT_SOURCE = ['qq', 'kugou', 'migu', 'joox', 'pyncmd', 'kuwo'];
-const DEFAULT_SOURCE = ['qq', 'kugou', 'joox', 'pyncmd', 'kuwo'];
+const DEFAULT_SOURCE = ['kugou', 'kuwo', 'migu', 'bilibili', 'ytdlp'];
 const PROVIDERS = {
 	qq: require('./provider/qq'),
 	kugou: require('./provider/kugou'),
@@ -9,6 +8,7 @@ const PROVIDERS = {
 	youtube: require('./provider/youtube'),
 	ytdownload: require('./provider/yt-download'),
 	youtubedl: require('./provider/youtube-dl'),
+	ytdlp: require('./provider/yt-dlp'),
 	bilibili: require('./provider/bilibili'),
 	pyncmd: require('./provider/pyncmd'),
 };
