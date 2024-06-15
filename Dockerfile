@@ -16,4 +16,6 @@ WORKDIR /app
 
 EXPOSE 8080 8081
 
+ENV DEVELOPMENT=false ENABLE_FLAC=true ENABLE_LOCAL_VIP=true NO_CACHE=false SIGN_KEY="./server.key" SIGN_CERT="./server.crt"
+
 ENTRYPOINT ["node", "app.js"]
